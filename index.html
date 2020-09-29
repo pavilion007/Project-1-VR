@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-assets>
+    <a-asset-item id="CasualTable" src="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FCasual%20Table%201.glb?v=1601352818576"></a-asset-item>
+    </a-assets>
+    <!--
+    <a-assets>
+    <a-asset-item id="Stool-OBJ" src="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390"></a-asset-item>
+  </a-assets>
+-->
+ <a-assets>
+    <a-asset-item id="Stool" src="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328"></a-asset-item>
+    </a-assets>
+  
+   <a-scene background="color: #FAFAFA" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+      <!-- Movement -->
+      <a-camera universal-controls="" camera="" rotation="-17.3033254129509 -141.17680072023495 0" look-controls="" wasd-controls="acceleration: 80" data-aframe-inspector-original-camera="" position="1.6222524699468472 0.7155 -1.200378902653026" visible="">
+            <a-entity raycaster="far: 150; objects: .intersectable" cursor="" geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
+        </a-camera>
+      
+      <!-- Table A -->
+      <a-gltf-model src="#CasualTable" position="-6.67064 -0.45 -3.55634" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FCasual%20Table%201.glb?v=1601352818576" scale="0.45 0.45 0.45" material="color: #ff0f0f; emissive: #e01a1a; roughness: 1"></a-gltf-model>
+      <!-- Table B -->
+      <a-gltf-model src="#CasualTable" position="1.13432 -0.45 2.52975" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FCasual%20Table%201.glb?v=1601352818576" scale="0.45 0.45 0.45" material="color: #ff0f0f; emissive: #e01a1a; roughness: 1"></a-gltf-model>
+      <!-- Table C -->
+      <a-gltf-model src="#CasualTable" position="3.87382 -0.45 2.50245" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FCasual%20Table%201.glb?v=1601352818576" scale="0.45 0.45 0.45" material="color: #ff0f0f; emissive: #e01a1a; roughness: 1"></a-gltf-model>
+      
+      <!--This Causes too much Lag-->
+      <!-- Chairs for A -->
+      <!--<a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="-6.15781 -0.25 -3.6009"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="-6.67138 -0.25 -3.0749"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="-7.20492 -0.25 -3.59836"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="-6.68033 -0.25 -4.18852" visible=""></a-entity>
+      <!-- Chairs for B -->
+      <!--<a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="0.59836 -0.25 2.46721"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="1.12295 -0.25 2.95902"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="1.12295 -0.25 2.0082"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="1.68033 -0.25 2.5"></a-entity>
+      <!-- Chairs for C -->
+      <!--<a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="-0.48361 -0.25 -0.05738"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="0.5 -0.25 -0.05738"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="-0.02459 -0.25 0.5"></a-entity>
+      <a-entity obj-model="obj: https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool.obj?v=1601406359390" scale="0.2 0.2 0.2" position="0.04098 -0.25 -0.54918"></a-entity>
+      -->
+      <!--Chairs for A-->
+      <a-gltf-model src="#Stool" position="-6.15781 -0.25 -3.6009" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="-6.67138 -0.25 -3.0749" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="-7.20492 -0.25 -3.59836" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="-6.68033 -0.25 -4.18852" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <!--Chairs for A-->
+      <a-gltf-model src="#Stool" position="0.59836 -0.25 2.46721" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="1.12295 -0.25 2.95902" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="1.12295 -0.25 2.0082" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="1.68033 -0.25 2.5" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <!--Chairs for A-->
+      <a-gltf-model src="#Stool" position="3.28471 -0.25 2.4209" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="4.46721 -0.25 2.36885" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="3.81147 -0.25 2.9918" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+      <a-gltf-model src="#Stool" position="3.90983 -0.25 1.94262" animation-mixer="" gltf-model="https://cdn.glitch.com/3f2e7e3c-72b4-4eba-8efe-1cede62b0c05%2FStool%202.0.glb?v=1601412667328" scale="0.2 0.2 0.2"></a-gltf-model>
+
+      
+      
+      
+      <!-- Ceiling -->
+    <a-entity static-body="" geometry="depth: 12.802; height: 0.1; width: 17.678" position="0 3 0" material="shader: flat; side: double; color: #d3d3d3" visible="false"></a-entity>
+    <!-- Floor -->
+    <a-entity static-body="" geometry="depth: 12.802; height: 0.1; width: 17.678" position="0 -0.5 0" material="shader: flat; side: double; color: #d3d3d3" visible=""></a-entity>
+    <!-- Wall A-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 3.5; width: 17.678" position="0 1.3 -6.401" material="roughness: 1; color: #d3d3d3; repeat: 4 2" visible=""></a-entity>
+      <!-- Wall B-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 3.5; width: 17.678" position="0 1.3 6.401" rotation="-180 0 0" material="roughness: 1; color: #0000FF; repeat: 4 2" visible=""></a-entity>
+      <!-- Wall C-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 3.5; width: 12.802" position="8.8 1.3 0" rotation="0 90 0" material="roughness: 1; color: #008000; repeat: 4 2" visible="" scale=""></a-entity>
+      <!-- Wall D-A-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 3.5; width: 8.23" position="-3.3136 1.3 2.27581" rotation="0 90 0" material="roughness: 1; color: #49b7ca; repeat: 4 2; emissive: #6eb6e2" visible="" scale=""></a-entity>
+      <!-- Wall D-B-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 3.5; width: 10.0584" position="-8.8 1.3 -1.3716" rotation="0 90 0" material="roughness: 1; color: #49b7ca; repeat: 4 2; emissive: #6eb6e2" visible="" scale=""></a-entity>
+      <!-- Wall D-above-Door-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 1.6712; width: 0.9144" position="-8.8 2.215 4.1148" rotation="0 90 0" material="roughness: 1; color: #49b7ca; repeat: 4 2; emissive: #6eb6e2" visible="" scale=""></a-entity>
+      <!-- Intro-Room-Splitter-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 3.5; width: 1.8288" position="-8.8 1.3 5.4864" rotation="0 90 0" material="roughness: 1; color: #49b7ca; repeat: 4 2; emissive: #6eb6e2" visible="" scale=""></a-entity>
+      <!-- Wall D Door-->
+      <a-entity static-body="" geometry="depth: 0.1; height: 1.8288; width: 0.9144" position="-8.8 0.459 4.1148" rotation="0 90 0" material="roughness: 1; color: #ff6905; repeat: 4 2; emissive: #efa506" visible="" scale=""></a-entity>
+      <!--Column A-->
+      <a-entity static-body="" geometry="primitive: cylinder; radius: 0.15; height: 3.5; segmentsRadial: 8" position="-0.005 1.3 -4.1914"></a-entity>
+      <!--Column B-->
+      <a-entity static-body="" geometry="primitive: cylinder; radius: 0.15; height: 3.5; segmentsRadial: 8" position="0.005 1.3 1.62471"></a-entity>
+
+      
+      
+      
+    <div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><a-entity></a-entity><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div><div class="a-loader-title" style="display: none;">Hello, WebVR! • A-Frame</div></a-scene>
+    
+  </body>
+</html>
+
